@@ -182,7 +182,18 @@ input, select, textarea {
 		font-style: italic;
 		padding: 1em 0 1em 2em;
 	}
+/*Botón Ver más*/
+    .complete{
+        display:none;
+    }
 
+    .more{
+        background:lightblue;
+        color:navy;
+        font-size:13px;
+        padding:3px;
+        cursor:pointer;
+    }
 /* Container */
 
 	.container {
