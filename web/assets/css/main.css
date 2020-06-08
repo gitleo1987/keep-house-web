@@ -2686,6 +2686,7 @@ input, select, textarea {
 				.feature.left .image img {
 					right: 0;
 					top: 0;
+
 				}
 
 			.feature.left .content {
@@ -3278,7 +3279,7 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
 
 		/* Section/Article */
-
+        /* Corregir esto! */
             #logokeep {
            max-width: 500px;
             position: 0;
@@ -3358,3 +3359,6 @@ input, select, textarea {
 				}
 
 	}
+
+
+
