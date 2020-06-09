@@ -1,1 +1,19 @@
-.keep-letra-b:before{content:"B"}
+@font-face {
+  font-family: KeepWeb;
+  src: url("../webfonts/keep-web.woff");
+}
+.keep-letra-b:before{
+    content:"B";
+    font-family: KeepWeb;
+}
+.keep-check:before{
+    content:"\2713";
+    font-family: KeepWeb;
+}
+li {
+    text-indent: -0.7em;
+}
+li::before {
+  content: "• "; /* Insert content that looks like bullets */
+}
+
