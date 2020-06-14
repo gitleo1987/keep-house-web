@@ -17,3 +17,16 @@
   content: "• "; /* Insert content that looks like bullets */
 }
 
+#mySelect2 {
+
+}
+
+.select2-selection--multiple {
+    background-color: #4eb980 !important;
+    border: solid 1px rgba(224, 224, 224, 0.75) !important;
+}
+
+.select2-selection--multiple .select2-selection__choice {
+    background-color: #6e6570 !important;
+}
+

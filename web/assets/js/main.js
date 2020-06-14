@@ -26,9 +26,19 @@
 		});
 
 })(jQuery);
-        $(document).ready(function() {
-            $('.js-servicios-basic-multiple').select2();
-        });
+
+$(document).ready(function() {
+    $('.js-servicios-basic-multiple').select2({
+          placeholder: {
+            text: 'Servicios seleccionados'
+        }
+    });
+    seleccionarServicio('BA');
+    $('.js-inmueble-basic-single').select2({
+        placeholder: 'Tipo de Inmueble',
+        minimumResultsForSearch: Infinity
+    });
+});
 
 function seleccionarServicio(codigo) {
     // obtener seleccionados
@@ -53,3 +63,11 @@ function seleccionarServicio(codigo) {
     $('#mySelect2').val(arrayLista); // Select the options
     $('#mySelect2').trigger('change'); // Notify any JS components that the value changed
 }
+
+$('#mySelect2').on('select2:unselect', function (e) {
+    // si quita básico, lo vuelve a agregar
+    var data = e.params.data;
+    if (data['id'] == 'BA') {
+        seleccionarServicio('BA');
+    }
+});
