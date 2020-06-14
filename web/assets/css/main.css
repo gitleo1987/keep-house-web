@@ -182,6 +182,9 @@ input, select, textarea {
 		font-style: italic;
 		padding: 1em 0 1em 2em;
 	}
+#logocel {
+    display: none;
+}
 /*Botón Ver más*/
     .complete{
         display:none;
@@ -1977,6 +1980,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
+
 		header p {
 			position: relative;
 			top: -1em;
@@ -2040,7 +2044,24 @@ input, select, textarea {
 				header.major.last h2 {
 					margin-bottom: 1em;
 				}
+                header .wssp {
+                    position: fixed;
+                    width: 90%;
+                    max-width: 1440px;
 
+                }
+                    header .wssp img{
+
+                        border-left:0 ;
+                        max-width: 200px;
+                        clear:both;
+                    }
+                        #whattsapp {
+                            float:none;
+                        }
+                        #lemus {
+                            float:none;
+                        }
 	footer {
 		text-align: center;
 	}
@@ -3261,7 +3282,7 @@ input, select, textarea {
         }
             #slogan {
 
-                max-width: 580px;
+                max-width: 500px;
         }
     }
           @media screen and (max-width: 580px){
@@ -3271,24 +3292,34 @@ input, select, textarea {
         }
             #slogan {
 
-                max-width: 480px;
+                max-width: 400px;
+        }
+              #telefono {
+                max-width: 400px;
+                margin:auto;
         }
     }
 /* Mobile (Portrait) */
 
 	@media screen and (max-width: 480px) {
-
+        #logocel {
+            display:block;
+            margin: auto;
+        }
 		/* Section/Article */
         /* Corregir esto! */
-            #logokeep {
-           max-width: 500px;
+        #logokeep {
+            display: none;
+        }
 
+        #slogan {
+
+            max-width: 400px;
             padding-left: 0;
         }
-            #slogan {
-
-                max-width: 480px;
-                padding-left: 0;
+        #telefono {
+            max-width: 400px;
+            margin:auto;
         }
 
 			header.major {
