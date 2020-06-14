@@ -30,3 +30,7 @@
     background-color: #6e6570 !important;
 }
 
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
