@@ -203,7 +203,7 @@ input, select, textarea {
 	}
 
 		.container.medium {
-			width: 38.25em;
+			width: 60em;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -213,7 +213,7 @@ input, select, textarea {
 			}
 
 				.container.medium {
-					width: 36em;
+					width: 50em;
 				}
 
 		}
