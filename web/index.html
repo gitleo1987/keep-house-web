@@ -6,12 +6,16 @@
 -->
 <html>
 	<head>
-      <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
 		<title>Keep House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/keep.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	</head>
 	<body class="is-preload">
 
@@ -45,38 +49,58 @@
 						<a href="#"  class="image icon solid fas keep-letra-b"> <img src="images/pic01.jpg" alt="" /></a>
 						<div class="content">
 							<h3>Servicio Básico</h3>
-                            <span class="teaser">Visita quincenal con revisión de:
+
                             <ul class="keep-lista-servicios">
-                            <li>Grifería y sanitarios, para evitar pérdidas de agua.</li>
-                            <li>Luces y sistema de alarma.</li>
-                            <li>Adecuado cierre de puertas y ventanas.</li>
+                                <li>Grifería y sanitarios, para evitar pérdidas de agua.</li>
+                                <li>Luces y sistema de alarma.</li>
+                                <li>Adecuado cierre de puertas y ventanas.</li>
+                                <li>Chequeo de humedad interior y exterior.</li>
                             </ul>
-                            </span>
-                            <span class="complete">
-                            <ul class="keep-lista-servicios">
-                            <li>Chequeo de humedad interior y exterior.</li>
-                            <li>Gas y electricidad.</li>
-                            <li>Airear la vivienda.</li>
-                            <li>Puesta en marcha de electrodomésticos, aire acondicionados, etc.</li>
-                            <li>Custodia de Llaves: Nos ocupamos de la entrega de llaves a invitados y personas autorizadas.</li>
-                            <li>+ Informe mensual del estado de la propiedad, incluye material fotográfico.</li>
-                            </ul>
-                            </span>
-                            <span class="more">Ver más..</span>
-						</div>
+                            <p><a href="#ex1" rel="modal:open">Ver más..</a></p>
+
+                            <!-- The Modal -->
+                            <div id="ex1" class="modal">
+                                <h3>Servicio Básico</h3>
+                                <ul class="keep-lista-servicios">
+                                    <li>Grifería y sanitarios, para evitar pérdidas de agua.</li>
+                                    <li>Luces y sistema de alarma.</li>
+                                    <li>Adecuado cierre de puertas y ventanas.</li>
+                                    <li>Chequeo de humedad interior y exterior.</li>
+                                    <li>Gas y electricidad.</li>
+                                    <li>Airear la vivienda.</li>
+                                    <li>Puesta en marcha de electrodomésticos, aire acondicionados, etc.</li>
+                                    <li>Custodia de Llaves: Nos ocupamos de la entrega de llaves a invitados y personas autorizadas.</li>
+                                    <li>Informe mensual del estado de la propiedad, incluye material fotográfico.</li>
+                                </ul>
+                              <a href="#" rel="modal:close">Cerrar</a>
+                            </div>
+
+                        </div>
                         </section>
                       <!-- Control de averías -->
 					<section class="feature right">
 						<a href="#" class="image icon solid fas keep-check"><img src="images/pic02.jpg" alt="" /></a>
 						<div class="content">
 							<h3>Gestión de averías</h3>
-							<span class="teaser">
-                            <p>Nuestra tarea es prever los problemas. Pero si ocurren, contamos con un robusto equipo de expertos en Plomería, Aire Acondicionado y Calefacción, Electricidad, Carpintería,
-                            </span>
-                            <span class="complete">
-                            <p>Cerrajería y reparaciones en general. Detectado el inconveniente, informamos, presupuestamos y supervisamos la reparación hasta su conclusión..</p>
-                            </span>
-                            <span class="more">ver más..</span>
+
+                            Nuestra tarea es prever los problemas.<br>
+                            Pero si ocurren, contamos con un robusto equipo de expertos en Plomería,<br>
+                            Aire Acondicionado y Calefacción...
+                            <!-- Trigger/Open The Modal -->
+                            <p><a href="#ex2" rel="modal:open">Ver más..</a></p>
+
+                            <!-- The Modal -->
+                            <div id="ex2" class="modal">
+
+
+                                  <h3>Gestión de averías</h3>
+
+                                    <p>Nuestra tarea es prever los problemas.<br>
+                                Pero si ocurren, contamos con un robusto equipo de expertos en Plomería,<br>
+                                Aire Acondicionado y Calefacción, Electricidad, Carpintería, Cerrajería y reparaciones en general. Detectado el inconveniente, informamos, presupuestamos y supervisamos la reparación hasta su conclusión..
+
+                                <a href="#" rel="modal:close">Cerrar</a>
+                            </div>
                         </div>
   					</section>
                      <!-- Casa Lista -->
