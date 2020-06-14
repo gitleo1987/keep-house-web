@@ -26,4 +26,30 @@
 		});
 
 })(jQuery);
+        $(document).ready(function() {
+            $('.js-servicios-basic-multiple').select2();
+        });
 
+function seleccionarServicio(codigo) {
+    // obtener seleccionados
+    var seleccionados = $('#mySelect2').select2('data');
+    // limpiar seleccion
+    $('#mySelect2').val(null);
+    // armar nueva lista, si el enviado ya estaba, quitarlo
+    var arrayLength = seleccionados.length;
+    var arrayLista = new Array();
+    arrayLista.push(codigo);
+    for (var i = 0; i < arrayLength; i++) {
+        var cod = seleccionados[i]['id'];
+        if (cod == codigo) {
+            // si el elemento ya estaba, lo quito
+            delete arrayLista[0];
+        } else {
+            // sino lo agrego
+            arrayLista.push(cod);
+        }
+
+    }
+    $('#mySelect2').val(arrayLista); // Select the options
+    $('#mySelect2').trigger('change'); // Notify any JS components that the value changed
+}

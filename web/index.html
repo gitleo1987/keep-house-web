@@ -12,10 +12,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/keep.css" />
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
         <!-- jQuery Modal -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
 	</head>
 	<body class="is-preload">
 
@@ -46,7 +50,7 @@
                 <!-- Servicio Básico -->
 				<div class="box alt container">
 					<section class="feature left">
-						<a href="#"  class="image icon solid fas keep-letra-b"> <img src="images/pic01.jpg" alt="" /></a>
+						<div class="image icon solid fas keep-letra-b"> <img src="images/pic01.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Servicio Básico</h3>
 
@@ -79,7 +83,7 @@
                         </section>
                       <!-- Control de averías -->
 					<section class="feature right">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/pic02.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('GA')" class="image icon solid fas keep-check"><img src="images/pic02.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Gestión de averías</h3>
 
@@ -105,7 +109,7 @@
   					</section>
                      <!-- Casa Lista -->
 					<section class="feature left">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/pic03.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('CL')" class="image icon solid fas keep-check"><img src="images/pic03.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Casa Lista</h3>
 							<span class="teaser">
@@ -120,7 +124,7 @@
                  <!-- Representación ante el consorcio-->
 
 					<section class="feature right">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/12%20REPRESENTACI%C3%93N.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('RC')" class="image icon solid fas keep-check"><img src="images/12%20REPRESENTACI%C3%93N.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Representación ante el consorcio</h3>
                             <p>Venir a Monte sólo por una reunión del edificio es muy molesto. Autorización mediante le representaremos y rendiremos un informe para mantenerlo al tanto. </p>
@@ -128,7 +132,7 @@
   					</section>
                      <!-- Gestión y pago de proveedores-->
 					<section class="feature left">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/13%20GESTI%C3%93N%20Y%20PAGO.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('PP')" class="image icon solid fas keep-check"><img src="images/13%20GESTI%C3%93N%20Y%20PAGO.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Gestión y pago de proveedores</h3>
 							<p>Deslíguese del pago de servicios, proveedores y gestiones municipales. </p>
@@ -136,7 +140,7 @@
                     </section>
                     <!-- Reformas en la Vivienda -->
 					<section class="feature right">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/14%20REFORMAS.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('RV')" class="image icon solid fas keep-check"><img src="images/14%20REFORMAS.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Reformas en la Vivienda</h3>
 							<p>Cambiar un piso del departamento, instalar una reja y proyectos más ambiciosos, todo proyecto se pueden abordar.</p>
@@ -145,7 +149,7 @@
 				 <!-- Transfer desde el Aeropuerto o Bahía Blanca -->
 
 					<section class="feature left">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/15%20TRANSFER.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('TA')" class="image icon solid fas keep-check"><img src="images/15%20TRANSFER.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Transfer desde el Aeropuerto o Bahía Blanca</h3>
                             <p>¿Visitas que llegan en otro medio que no sea en auto? Nosotros nos ocupamos de traerlo sin que Ud. se pierda un minuto de playa. Contratación puntual, no se incorpora al abono. </p>
@@ -153,9 +157,9 @@
                     </section>
                       <!-- Envío / Recepción -->
 					<section class="feature right">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/16%20ENV%C3%8DO%20RECEPCI%C3%93N.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('ER')" class="image icon solid fas keep-check"><img src="images/16%20ENV%C3%8DO%20RECEPCI%C3%93N.jpg" alt="" /></div>
 						<div class="content">
-							<h3>Envío / Recepción </h3>
+							<h3>Envío / Recepción</h3>
 							<p>¿Compró una heladera o un mueble nuevo?
                             <br>Nosotros lo recibimos, instalamos y damos el destino que Ud. indique al aparato reemplazado.
                             <br>Lo mismo ocurre con paquetería de todos los tamaños.</p>
@@ -163,18 +167,18 @@
                     </section>
                       <!-- Leña y Carbón  -->
 					<section class="feature left">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/17%20LE%C3%91A%20CARB%C3%93N.jpg" alt="" /></a>
+						<div onclick="seleccionarServicio('LC')" class="image icon solid fas keep-check"><img src="images/17%20LE%C3%91A%20CARB%C3%93N.jpg" alt="" /></div>
 						<div class="content">
-							<h3>Leña y Carbón </h3>
+							<h3>Leña y Carbón</h3>
 							<p>Nos ocupamos de mantener su leñera y carbonera siempre lista para un buen asado o un cálido fuego en el invierno. </p>
 						</div>
 					</section>
 
-                 <!-- Servivio antiplagas -->
-                <section class="feature right">
-						<a href="#" class="image icon solid fas keep-check"><img src="images/18%20SERV%20ANTIPLAGAS.jpg" alt="" /></a>
+                    <!-- Servivio antiplagas -->
+                    <section class="feature right">
+						<div onclick="seleccionarServicio('SA')" class="image icon solid fas keep-check"><img src="images/18%20SERV%20ANTIPLAGAS.jpg" alt="" /></div>
 						<div class="content">
-							<h3>Servivio antiplagas </h3>
+							<h3>Servicio antiplagas</h3>
 							<p>Fumigación sistemática del hogar, jardín y parque, para mantener la higiene y asegurarle que su momento de relax no se convierta en algo desagradable.</p>
 
                         </div>
@@ -182,64 +186,7 @@
 
 				<!--
 				<div class="box container">
-					<header>
-						<h2>A lot of generic stuff</h2>
-					</header>
-					<section>
-						<header>
-							<h3>Paragraph</h3>
-							<p>This is the subtitle for this particular heading</p>
-						</header>
-						<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-						habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-						leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-						amet risus elit.</p>
-					</section>
-					<section>
-						<header>
-							<h3>Blockquote</h3>
-						</header>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-						tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-					</section>
-					<section>
-						<header>
-							<h3>Divider</h3>
-						</header>
-						<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-						ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-						facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-						tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-						posuere cubilia.</p>
-						<hr />
-						<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-						ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-						facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-						tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-						posuere cubilia.</p>
-					</section>
-					<section>
-						<header>
-							<h3>Unordered List</h3>
-						</header>
-						<ul class="default">
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						</ul>
-					</section>
-					<section>
-						<header>
-							<h3>Ordered List</h3>
-						</header>
-						<ol class="default">
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-							<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						</ol>
-					</section>
+
 					<section>
 						<header>
 							<h3>Table</h3>
@@ -346,6 +293,18 @@
 
 					<form method="post" action="#">
 						<div class="row">
+                            <select id="mySelect2" class="js-servicios-basic-multiple" name="servicios[]" multiple="multiple">
+                                <option value="GA">Gestión de Averías</option>
+                                <option value="CL">Casa Lista</option>
+                                <option value="RC">Representación ante el consorcio</option>
+                                <option value="RC">Representación ante el consorcio</option>
+                                <option value="PP">Gestión y pago de proveedores</option>
+                                <option value="RV">Reformas en la Vivienda</option>
+                                <option value="TA">Transfer desde el Aeropuerto o Bahía Blanca</option>
+                                <option value="ER">Envío/Recepción</option>
+                                <option value="LC">Leña y Carbón</option>
+                                <option value="SA">Servicio antiplagas</option>
+                            </select>
 							<div class="col-6 col-12-mobilep">
 								<input type="text" name="name" placeholder="Name" />
 							</div>
@@ -384,6 +343,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 	</body>
 </html>
