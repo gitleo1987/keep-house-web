@@ -26,8 +26,4 @@
 		});
 
 })(jQuery);
-        $(".more").toggle(function(){
-            $(this).text("less..").siblings(".complete").show();
-        }, function(){
-            $(this).text("ver más..").siblings(".complete").hide();
-        });
+

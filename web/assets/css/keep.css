@@ -10,10 +10,10 @@
     content:"\2713";
     font-family: KeepWeb;
 }
-li {
+.keep-lista-servicios li {
     text-indent: -0.7em;
 }
-li::before {
+.keep-lista-servicios li::before {
   content: "• "; /* Insert content that looks like bullets */
 }
 
