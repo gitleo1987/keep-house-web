@@ -12,7 +12,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/keep.css" />
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
         <!-- jQuery Modal -->
@@ -183,7 +182,7 @@
 
                         </div>
                     </section>
-
+                </div>
 				<!--
 				<div class="box container">
 
@@ -268,7 +267,7 @@
 						</form>
 					</section>
 				</div>
-				-->
+
 
 				<footer class="major container medium">
 					<h3>Get shady with science</h3>
@@ -277,7 +276,7 @@
 						<li><a href="#" class="button">Join our crew</a></li>
 					</ul>
 				</footer>
-
+            -->
 			</div>
 
 		<!-- Footer -->
@@ -285,18 +284,19 @@
 				<div class="container medium">
 
 					<header class="major last">
-						<h2>Questions or comments?</h2>
+						<h2>Solicitud de Presupuesto</h2>
 					</header>
 
-					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor
-					orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
+					<p>¿Querés saber cuál es el valor de nuestro servicio? Tildá los adicionales que sean de tu interés y te enviaremos un presupuesto a medida. </p>
 
 					<form method="post" action="#">
 						<div class="row">
-                            <select id="mySelect2" class="js-servicios-basic-multiple" name="servicios[]" multiple="multiple">
+                            <div class="col-12">
+                            <label for="mySelect2">Servicios seleccionados</label>
+                            <select id="mySelect2" class="js-servicios-basic-multiple" name="servicios[]" multiple="multiple" lang="es">
+                                <option value="BA" disabled="disabled">Servicio Básico</option>
                                 <option value="GA">Gestión de Averías</option>
                                 <option value="CL">Casa Lista</option>
-                                <option value="RC">Representación ante el consorcio</option>
                                 <option value="RC">Representación ante el consorcio</option>
                                 <option value="PP">Gestión y pago de proveedores</option>
                                 <option value="RV">Reformas en la Vivienda</option>
@@ -305,33 +305,53 @@
                                 <option value="LC">Leña y Carbón</option>
                                 <option value="SA">Servicio antiplagas</option>
                             </select>
+                            </div>
+
 							<div class="col-6 col-12-mobilep">
-								<input type="text" name="name" placeholder="Name" />
+								<input type="text" name="nombre" placeholder="Nombre" />
 							</div>
-							<div class="col-6 col-12-mobilep">
-								<input type="email" name="email" placeholder="Email" />
+                            <div class="col-6 col-12-mobilep">
+								<input type="text" name="apellido" placeholder="Apellido" />
 							</div>
 							<div class="col-12">
-								<textarea name="message" placeholder="Message" rows="6"></textarea>
+								<input type="email" name="email" placeholder="Correo Electrónico" />
+							</div>
+                            <div class="col-6 col-12-mobilep">
+								<input type="text" name="telefono" placeholder="Teléfono / WhatsApp" />
+							</div>
+							<div class="col-6 col-12-mobilep">
+								<select id="mySelect2-inm" class="js-inmueble-basic-single" name="inmueble" lang="es">
+                                    <option></option>
+                                    <option value="CA">Casa</option>
+                                    <option value="DE">Departamento</option>
+                                </select>
+							</div>
+                            <div class="col-6 col-12-mobilep">
+								<input type="text" name="supcub" placeholder="Superficie cubierta" />
+							</div>
+                            <div class="col-6 col-12-mobilep">
+								<input type="text" name="supdesc" placeholder="Superficie descubierta" />
+							</div>
+							<div class="col-12">
+								<input type="text" name="calle" placeholder="Calle y Número" />
 							</div>
 							<div class="col-12">
 								<ul class="actions special">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Enviar" /></li>
 								</ul>
 							</div>
 						</div>
 					</form>
 
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+
 					</ul>
 
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Keep-House Cuidado y mantenimiento de propiedades. De Alejandro Lemus – Monte Hermoso</li>
 					</ul>
 
 				</div>
@@ -344,5 +364,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+            <!-- Libreria español -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/es.js"></script>
 	</body>
 </html>
