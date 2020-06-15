@@ -88,5 +88,18 @@ $('#mySelect2').on('select2:unselect', function (e) {
     var data = e.params.data;
     if (data['id'] == 'BA') {
         seleccionarServicio('BA');
+    } else {
+        $('#'+data['id']).removeClass('imagen-seleccionada');
     }
 });
+
+$('#mySelect2').on('select2:select', function (e) {
+    var data = e.params.data;
+    $('#'+data['id']).addClass('imagen-seleccionada');
+
+});
+
+$('.image').click(function() {
+    $(this).toggleClass('imagen-seleccionada');
+});
+

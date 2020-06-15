@@ -9,7 +9,7 @@
 		<title>Keep House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/keep.css" />
@@ -80,7 +80,7 @@
                         </section>
                       <!-- Control de averías -->
 					<section class="feature right">
-						<div onclick="seleccionarServicio('GA')" class="image icon solid fas keep-check"><img src="images/serv-averias.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('GA')" id="GA" class="image icon solid fas keep-check imagen-no-seleccionada"><img src="images/serv-averias.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Gestión de averías</h3>
 
@@ -93,10 +93,9 @@
                             <!-- The Modal -->
                             <div id="ex2" class="modal">
 
-
                                   <h3>Gestión de averías</h3>
 
-                                    <p>Nuestra tarea es prever los problemas.<br>
+                                <p>Nuestra tarea es prever los problemas.<br>
                                 Pero si ocurren, contamos con un robusto equipo de expertos en Plomería,<br>
                                 Aire Acondicionado y Calefacción, Electricidad, Carpintería, Cerrajería y reparaciones en general. Detectado el inconveniente, informamos, presupuestamos y supervisamos la reparación hasta su conclusión..
 
@@ -106,22 +105,27 @@
   					</section>
                      <!-- Casa Lista -->
 					<section class="feature left">
-						<div onclick="seleccionarServicio('CL')" class="image icon solid fas keep-check"><img src="images/serv-casa-lista.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('CL')" id="CL" class="image icon solid fas keep-check"><img src="images/serv-casa-lista.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Casa Lista</h3>
-							<span class="teaser">
-                                <p>Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada,</p>
-                            </span>
-                            <span class="complete">
-                            <p>calefaccionada y con una compra mínima de supermercado en la heladera, para aprovechar la estadía a pleno.</p>
-                            </span>
+
+                                Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada...
+                            <p><a href="#ex3" rel="modal:open">Ver más..</a></p>
+                            <div id="ex3" class="modal">
+                                <h3>Casa Lista</h3>
+
+                                Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada,
+                            calefaccionada y con una compra mínima de supermercado en la heladera, para aprovechar la estadía a pleno.
+                                <a href="#" rel="modal:close">Cerrar</a>
+                            </div>
+
 						</div>
 					</section>
 				 <!-- Otras opciones nuevas!-->
                  <!-- Representación ante el consorcio-->
 
 					<section class="feature right">
-						<div onclick="seleccionarServicio('RC')" class="image icon solid fas keep-check"><img src="images/serv-representacion.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('RC')" id="RC" class="image icon solid fas keep-check"><img src="images/serv-representacion.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Representación ante el consorcio</h3>
                             <p>Venir a Monte sólo por una reunión del edificio es muy molesto. Autorización mediante le representaremos y rendiremos un informe para mantenerlo al tanto. </p>
@@ -129,7 +133,7 @@
   					</section>
                      <!-- Gestión y pago de proveedores-->
 					<section class="feature left">
-						<div onclick="seleccionarServicio('PP')" class="image icon solid fas keep-check"><img src="images/serv-gestion-pago.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('PP')" id="PP" class="image icon solid fas keep-check"><img src="images/serv-gestion-pago.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Gestión y pago de proveedores</h3>
 							<p>Deslíguese del pago de servicios, proveedores y gestiones municipales. </p>
@@ -137,34 +141,48 @@
                     </section>
                     <!-- Reformas en la Vivienda -->
 					<section class="feature right">
-						<div onclick="seleccionarServicio('RV')" class="image icon solid fas keep-check"><img src="images/serv-reformas.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('RV')" id="RV" class="image icon solid fas keep-check"><img src="images/serv-reformas.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Reformas en la Vivienda</h3>
-							<p>Cambiar un piso del departamento, instalar una reja y proyectos más ambiciosos, todo proyecto se pueden abordar.</p>
+							<p>Cambiar un piso del departamento, instalar una reja y proyectos más ambiciosos, todo proyecto se puede abordar.</p>
 						</div>
 					</section>
 				 <!-- Transfer desde el Aeropuerto o Bahía Blanca -->
 
 					<section class="feature left">
-						<div onclick="seleccionarServicio('TA')" class="image icon solid fas keep-check"><img src="images/serv-transfer.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('TA')" id="TA" class="image icon solid fas keep-check"><img src="images/serv-transfer.jpg" alt="" /></div>
 						<div class="content">
-							<h3>Transfer desde el Aeropuerto o Bahía Blanca</h3>
-                            <p>¿Visitas que llegan en otro medio que no sea en auto? Nosotros nos ocupamos de traerlo sin que Ud. se pierda un minuto de playa. Contratación puntual, no se incorpora al abono. </p>
+							<h3>Transfer desde <br>el Aeropuerto <br>o Bahía Blanca</h3>
+                            <p>¿Visitas que llegan en otro medio que <br>no sea en auto? Nosotros nos ocupamos...</p>
+                            <p><a href="#ex5" rel="modal:open">Ver más..</a></p>
+                            <div id="ex5" class="modal">
+                                <h3>Transfer desde <br>el Aeropuerto <br>o Bahía Blanca</h3>
+                            <p>¿Visitas que llegan en otro medio que <br>no sea en auto? Nosotros nos ocupamos <br>de traerlo sin que Ud. se pierda un minuto de playa. Contratación puntual, no se incorpora al abono. </p>
+                                 <a href="#" rel="modal:close">Cerrar</a>
+                            </div>
 						</div>
                     </section>
                       <!-- Envío / Recepción -->
 					<section class="feature right">
-						<div onclick="seleccionarServicio('ER')" class="image icon solid fas keep-check"><img src="images/serv-envio-recep.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('ER')" id="ER" class="image icon solid fas keep-check"><img src="images/serv-envio-recep.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Envío / Recepción</h3>
 							<p>¿Compró una heladera o un mueble nuevo?
-                            <br>Nosotros lo recibimos, instalamos y damos el destino que Ud. indique al aparato reemplazado.
+                            <br>Nosotros lo recibimos, instalamos<br> y damos el destino que Ud. <br>indique al aparato reemplazado...
+                            <p><a href="#ex4" rel="modal:open">Ver más..</a></p>
+                            <div id="ex4" class="modal">
+                                <h3>Envío / Recepción</h3>
+							<p>¿Compró una heladera o un mueble nuevo?
+                            <br>Nosotros lo recibimos, instalamos<br> y damos el destino que Ud. <br>indique al aparato reemplazado.
                             <br>Lo mismo ocurre con paquetería de todos los tamaños.</p>
+                                <a href="#" rel="modal:close">Cerrar</a>
+                            </div>
+
                         </div>
                     </section>
                       <!-- Leña y Carbón  -->
 					<section class="feature left">
-						<div onclick="seleccionarServicio('LC')" class="image icon solid fas keep-check"><img src="images/serv-lena-carbon.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('LC')" id="LC" class="image icon solid fas keep-check"><img src="images/serv-lena-carbon.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Leña y Carbón</h3>
 							<p>Nos ocupamos de mantener su leñera y carbonera siempre lista para un buen asado o un cálido fuego en el invierno. </p>
@@ -173,10 +191,10 @@
 
                     <!-- Servivio antiplagas -->
                     <section class="feature right">
-						<div onclick="seleccionarServicio('SA')" class="image icon solid fas keep-check"><img src="images/serv-antiplagas.jpg" alt="" /></div>
+						<div onclick="seleccionarServicio('SA')" id="SA" class="image icon solid fas keep-check"><img src="images/serv-antiplagas.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Servicio antiplagas</h3>
-							<p>Fumigación sistemática del hogar, jardín y parque, para mantener la higiene y asegurarle que su momento de relax no se convierta en algo desagradable.</p>
+							<p>Fumigación sistemática del hogar,<br> jardín y parque, para mantener la higiene <br>y asegurarle que su momento de relax <br>no se convierta en algo desagradable.</p>
 
                         </div>
                     </section>

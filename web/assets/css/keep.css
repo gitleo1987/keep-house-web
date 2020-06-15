@@ -48,3 +48,17 @@
     width:100%;
     position:absolute;
 }
+
+.feature .image {
+    cursor: pointer;
+}
+
+.imagen-seleccionada {
+    border: 10px solid #1a73e8;
+}
+
+.image img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
