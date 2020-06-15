@@ -36,14 +36,9 @@ $(window) .scroll(function() {
         $('#wssp').fadeOut();
     }
 });
-$(document).ready(function() {
-    $('#wssp').click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
-        return false;
-    });
 
-});
+
+
  /*Scroll to top when arrow up clicked END*/
 
 $(document).ready(function() {

@@ -182,7 +182,9 @@ input, select, textarea {
 		font-style: italic;
 		padding: 1em 0 1em 2em;
 	}
-
+#wssp {
+    display: none;
+}
 
 #logocel {
     display: none;
