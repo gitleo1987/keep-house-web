@@ -3,6 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
 (function($) {
 
 	var	$window = $(window),
@@ -26,6 +27,24 @@
 		});
 
 })(jQuery);
+/*Scroll to top when arrow up clicked BEGIN*/
+$(window) .scroll(function() {
+    var height = $(window).scrollTop();
+    if (height >350) {
+        $('#wssp').fadeIn();
+    } else {
+        $('#wssp').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $('#wssp').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        return false;
+    });
+
+});
+ /*Scroll to top when arrow up clicked END*/
 
 $(document).ready(function() {
     $('.js-servicios-basic-multiple').select2({
