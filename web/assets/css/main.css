@@ -2970,9 +2970,6 @@ input, select, textarea {
 			}
         h2 {
             font-size: 1.5em;
-}
-        #slogan {
-            max-width: 1200px;
         }
 
 
@@ -3133,9 +3130,7 @@ input, select, textarea {
             max-width: 900px;
 
         }
-            #slogan {
-            max-width: 900px;
-        }
+
             #telefono {
                 width: 700px;
                 margin:auto;
@@ -3162,9 +3157,7 @@ input, select, textarea {
             max-width: 760px;
 
         }
-            #slogan {
-            max-width: 760px;
-        }
+
             #telefono {
                 max-width: 580px;
                 margin:auto;
@@ -3302,10 +3295,7 @@ input, select, textarea {
             max-width: 650px;
 
         }
-            #slogan {
 
-                max-width: 650px;
-        }
              #telefono {
                 max-width: 500px;
                 margin:auto;
@@ -3316,10 +3306,7 @@ input, select, textarea {
             max-width: 580px;
 
         }
-            #slogan {
 
-                max-width: 500px;
-        }
              #telefono {
                 max-width: 450px;
                 margin:auto;
@@ -3330,10 +3317,7 @@ input, select, textarea {
             max-width:480px;
 
         }
-            #slogan {
 
-                max-width: 450px;
-        }
               #telefono {
                 max-width: 400px;
                 margin:auto;
@@ -3352,11 +3336,7 @@ input, select, textarea {
             display: none;
         }
 
-        #slogan {
 
-            max-width: 400px;
-            padding-left: 0;
-        }
         #telefono {
             max-width: 400px;
             margin:auto;
@@ -3435,24 +3415,13 @@ input, select, textarea {
 
 	}
 @media screen and (max-width: 320px) {
-            #logocel {
-                display:block;
-                margin: auto;
-                max-width: 180px;
-            }
             #logokeep {
                 display: none;
             }
-
-            #slogan {
-
-                max-width: 320px;
-                padding-left: 0;
-        }
             #telefono {
                 max-width: 300px;
                 margin:auto;
-        }
+            }
         	#header p {
 					font-size: 0.8em;
 				}
