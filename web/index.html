@@ -26,22 +26,21 @@
 			<div id="header">
 				<img class= "img-responsive logotipo" id="logokeep" src="images/logo.png">
                 <div class="logo-vertical">
-                    <img class="img-responsive" id= "logocel" src= "images/logo-vertical.jpeg">
+                <img class="img-responsive" id= "logocel" src= "images/logo-vertical.jpeg">
                 </div>
 				<img class="img-responsive" id="slogan" src="images/slogan.png">
-                <img  id="telefono" src="images/telefono.png">
-				<p>Disfrutá la tranquilidad de que alguien se ocupe de tu casa mientras no estás.
-                <br>Así cuando vuelvas, vas a encontrar "todo bien y en funcionamiento".
-                <br>Y si hubiera algún inconveniente, te lo avisaremos a tiempo y nos ocuparemos de resolverlo. </p>
+                <img  class="tel" id="telefono" src="images/telefono.png">
 			</div>
 
 		<!-- Main -->
 			<div id="main">
 
 				<header class="major container medium">
-					<h2>Por un conveniente abono mensual te ofrecemos un servicio básico, al que podés sumar los adicionales que te parezcan.
-                    <br/>
-                    A continuación, armá tu kit tildando los servicios adicionales y solicitá presupuesto.
+					<h2>Disfrutá la tranquilidad de que alguien se ocupe de tu casa mientras no estás.
+                    <br>Así cuando vuelvas, vas a encontrar "todo bien y en funcionamiento".
+                    <br>Y si hubiera algún inconveniente, te lo avisaremos a tiempo y nos ocuparemos de resolverlo.
+                    <br>Por un conveniente abono mensual te ofrecemos un servicio básico, al que podés sumar los adicionales que te parezcan.
+                    <br/>A continuación, armá tu kit tildando los servicios adicionales y solicitá presupuesto.
                     </h2>
 				</header>
                 <!-- Servicios -->
@@ -305,28 +304,24 @@
 						<h2>Solicitud de Presupuesto</h2>
 					</header>
 
-					<p>¿Querés saber cuál es el valor de nuestro servicio? <br>Agregá los adicionales que sean de tu interés y te enviaremos un presupuesto a medida. </p>
+					<p>¿Querés saber cuál es el valor de nuestro servicio? Tildá los adicionales que sean de tu interés y te enviaremos un presupuesto a medida. </p>
 
 					<form method="post" action="#">
 						<div class="row">
                             <div class="col-12">
-                                <ul class="actions special">
-						          <li><div class="button abrir-selector-servicios">Agregá Servicio</div></li>
-					           </ul>
-
-                                <select id="mySelect2" class="js-servicios-basic-multiple" name="servicios[]" multiple="multiple" lang="es">
-                                    <option value="BA" disabled="disabled">Servicio Básico</option>
-                                    <option value="GA">Gestión de Averías</option>
-                                    <option value="CL">Casa Lista</option>
-                                    <option value="RC">Representación ante el consorcio</option>
-                                    <option value="PP">Gestión y pago de proveedores</option>
-                                    <option value="RV">Reformas en la Vivienda</option>
-                                    <option value="TA">Transfer desde el Aeropuerto o Bahía Blanca</option>
-                                    <option value="ER">Envío/Recepción</option>
-                                    <option value="LC">Leña y Carbón</option>
-                                    <option value="SA">Servicio antiplagas</option>
-                                </select>
-
+                            <label for="mySelect2">Servicios seleccionados</label>
+                            <select id="mySelect2" class="js-servicios-basic-multiple" name="servicios[]" multiple="multiple" lang="es">
+                                <option value="BA" disabled="disabled">Servicio Básico</option>
+                                <option value="GA">Gestión de Averías</option>
+                                <option value="CL">Casa Lista</option>
+                                <option value="RC">Representación ante el consorcio</option>
+                                <option value="PP">Gestión y pago de proveedores</option>
+                                <option value="RV">Reformas en la Vivienda</option>
+                                <option value="TA">Transfer desde el Aeropuerto o Bahía Blanca</option>
+                                <option value="ER">Envío/Recepción</option>
+                                <option value="LC">Leña y Carbón</option>
+                                <option value="SA">Servicio antiplagas</option>
+                            </select>
                             </div>
 
 							<div class="col-6 col-12-mobilep">

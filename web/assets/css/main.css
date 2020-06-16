@@ -143,7 +143,7 @@ input, select, textarea {
 		letter-spacing: 0.125em;
 		line-height: 1.75em;
 		margin-bottom: 1em;
-		text-transform: uppercase;
+		text-transform: none;
 		text-align: center;
         font-family: 'Roboto Condensed', sans-serif;
 	}
@@ -190,6 +190,12 @@ input, select, textarea {
 
 #logocel {
     display: none;
+}
+#telefono {
+
+    width: 20% !important;
+
+
 }
 /*Botón Ver más*/
     .complete{
@@ -2068,6 +2074,12 @@ input, select, textarea {
                         #lemus {
                             float:none;
                         }
+                   /*FRUTA*/
+                    header .tel {
+                            position: relative !important;
+                            padding: 0;
+                            float:none;
+                        }
 	footer {
 		text-align: center;
 	}
@@ -2744,11 +2756,11 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-		background-position: bottom center,					top left,				center center;
-		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
+		background-attachment: scroll,								fixed;
+		background-image: url("images/top-3200.svg"),url("../../images/header.jpg");
+		background-position: bottom center,						center center;
+		background-repeat: repeat-x,							no-repeat;
+		background-size: 3200px 460px,							cover;
 		color: rgba(255, 255, 255, 0.8);
 		padding: 10em 0 20em 0;
 		position: relative;
@@ -3015,10 +3027,8 @@ input, select, textarea {
 					font-size: 1.25em;
 					line-height: 1.65em;
 				}
-                #telefono {
-                    width: 1000px;
-                    margin:auto;
-        }
+
+
 	}
 
 /* Normal */
@@ -3075,9 +3085,9 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1600px 230px,					auto,							cover;
+				background-attachment: scroll,							scroll;
+				background-image: url("images/top-1600.svg"), url("../../images/header.jpg");
+				background-size: 1600px 230px,					       cover;
 				padding: 6em 0 12em 0;
 			}
 
@@ -3115,10 +3125,7 @@ input, select, textarea {
 			#main {
 				padding: 4em 0 3em 0;
 			}
-            #telefono {
-                width: 800px;
-                margin:auto;
-        }
+
 	}
 
 /* Narrow */
@@ -3135,10 +3142,7 @@ input, select, textarea {
 
         }
 
-            #telefono {
-                width: 700px;
-                margin:auto;
-        }
+
 
 	}
 
@@ -3162,10 +3166,7 @@ input, select, textarea {
 
         }
 
-            #telefono {
-                max-width: 580px;
-                margin:auto;
-        }
+
 	}
 
 /* Mobile */
@@ -3248,8 +3249,8 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1280px 184px,						auto,							cover;
+				background-image: url("images/top-1280.svg"),  url("../../images/header.jpg");
+				background-size: 1280px 184px,								cover;
 				padding: 3em 0 7em 0;
 			}
 
@@ -3300,10 +3301,7 @@ input, select, textarea {
 
         }
 
-             #telefono {
-                max-width: 500px;
-                margin:auto;
-        }
+
 	}
     @media screen and (max-width: 650px){
             #logokeep {
@@ -3311,10 +3309,7 @@ input, select, textarea {
 
         }
 
-             #telefono {
-                max-width: 450px;
-                margin:auto;
-        }
+
     }
           @media screen and (max-width: 580px){
             #logokeep {
@@ -3322,10 +3317,7 @@ input, select, textarea {
 
         }
 
-              #telefono {
-                max-width: 400px;
-                margin:auto;
-        }
+
     }
 /* Mobile (Portrait) */
 
@@ -3342,8 +3334,8 @@ input, select, textarea {
 
 
         #telefono {
-            max-width: 400px;
-            margin:auto;
+           width: 35% !important;
+
         }
         h2  {
             font-size: 10pt;
@@ -3423,8 +3415,8 @@ input, select, textarea {
                 display: none;
             }
             #telefono {
-                max-width: 300px;
-                margin:auto;
+               width: 40% !important;
+
             }
         	#header p {
 					font-size: 0.8em;
