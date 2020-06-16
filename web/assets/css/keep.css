@@ -2,6 +2,10 @@
   font-family: KeepWeb;
   src: url("../webfonts/keep-web.woff");
 }
+
+#header {
+    height: 100%;
+}
 .keep-letra-b:before{
     content:"B";
     font-family: KeepWeb;
@@ -95,4 +99,25 @@
 
 .select2-results__option {
     text-align: center;
+}
+
+.header-consulta {
+    position:absolute;
+    width:100%;
+    bottom:9%;
+    text-align: center;
+}
+.header-slogan {
+    position:absolute;
+    width:100%;
+    bottom:40%;
+}
+.header-logo {
+    position:absolute;
+    width:100%;
+    bottom:65%;
+}
+
+.tel{
+   max-width: 12%;
 }

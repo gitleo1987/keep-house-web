@@ -24,12 +24,15 @@
 
 		<!-- Header -->
 			<div id="header">
-				<img class= "img-responsive logotipo" id="logokeep" src="images/logo.png">
+                <div class="header-logo">
+				    <img class= "img-responsive logotipo" id="logokeep" src="images/logo.png">
+                </div>
                 <div class="logo-vertical">
                 <img class="img-responsive" id= "logocel" src= "images/logo-vertical.jpeg">
                 </div>
-				<img class="img-responsive" id="slogan" src="images/slogan.png">
-                <img  class="tel" id="telefono" src="images/telefono.png">
+                <div class="header-slogan"><img class="img-responsive" id="slogan" src="images/slogan.png"></div>
+                <div class="header-consulta"><a href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img class="tel img-responsive" id="telefono" src="images/consulta.png"></a></div>
+
 			</div>
 
 		<!-- Main -->
@@ -39,7 +42,8 @@
 					<h2>Disfrutá la tranquilidad de que alguien se ocupe de tu casa mientras no estás.
                     <br>Así cuando vuelvas, vas a encontrar "todo bien y en funcionamiento".
                     <br>Y si hubiera algún inconveniente, te lo avisaremos a tiempo y nos ocuparemos de resolverlo.
-                    <br>Por un conveniente abono mensual te ofrecemos un servicio básico, al que podés sumar los adicionales que te parezcan.
+                    </h2><br>
+                    <h2>Por un conveniente abono mensual te ofrecemos un servicio básico, al que podés sumar los adicionales que te parezcan.
                     <br/>A continuación, armá tu kit tildando los servicios adicionales y solicitá presupuesto.
                     </h2>
 				</header>
@@ -51,31 +55,12 @@
 						<div class="content">
                             <a id="wssp" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; right: 20px; z-index: 2000;" title="Contactanos por Whatsapp" href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img src="images/whatsapp.png"></a>
 							<h3>Servicio Básico</h3>
-                                Visita quincenal con revisión de
-                            <ul class="keep-lista-servicios">
-                                <li>Grifería y sanitarios, para evitar pérdidas de agua.</li>
-                                <li>Luces y sistema de alarma.</li>
-                                <li>Adecuado cierre de puertas y ventanas.</li>
-                                <li>Chequeo de humedad interior y exterior.</li>
-                            </ul>
-                            <p><a href="#ex1" rel="modal:open">Ver más..</a></p>
-
-                            <!-- The Modal -->
-                            <div id="ex1" class="modal">
-                                <h3>Servicio Básico</h3>
-                                <ul class="keep-lista-servicios">
-                                    <li>Grifería y sanitarios, para evitar pérdidas de agua.</li>
-                                    <li>Luces y sistema de alarma.</li>
-                                    <li>Adecuado cierre de puertas y ventanas.</li>
-                                    <li>Chequeo de humedad interior y exterior.</li>
-                                    <li>Gas y electricidad.</li>
-                                    <li>Airear la vivienda.</li>
-                                    <li>Puesta en marcha de electrodomésticos, aire acondicionados, etc.</li>
-                                    <li>Custodia de Llaves: Nos ocupamos de la entrega de llaves a invitados y personas autorizadas.</li>
-                                    <li>Informe mensual del estado de la propiedad, incluye material fotográfico.</li>
-                                </ul>
-                              <a href="#" rel="modal:close">Cerrar</a>
-                            </div>
+                             <p>   Visita quincenal con revisión de: Grifería y sanitarios, para evitar pérdidas de agua.
+                            Luces y sistema de alarma. Adecuado cierre de puertas y ventanas. Chequeo de humedad interior y exterior. Gas y electricidad.
+                                    Airear la vivienda. Puesta en marcha de electrodomésticos, aire acondicionados, etc.
+                                    Custodia de Llaves: Nos ocupamos de la entrega de llaves a invitados y personas autorizadas.
+                                    Informe mensual del estado de la propiedad, incluye material fotográfico.
+                            </p>
 
                         </div>
                         </section>
@@ -84,24 +69,9 @@
 						<div onclick="seleccionarServicio('GA')" id="GA" class="image icon solid fas keep-check imagen-no-seleccionada"><img src="images/serv-averias.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Gestión de averías</h3>
-
-                            Nuestra tarea es prever los problemas.<br>
-                            Pero si ocurren, contamos con un robusto equipo de expertos en Plomería,<br>
-                            Aire Acondicionado y Calefacción...
-                            <!-- Trigger/Open The Modal -->
-                            <p><a href="#ex2" rel="modal:open">Ver más..</a></p>
-
-                            <!-- The Modal -->
-                            <div id="ex2" class="modal">
-
-                                  <h3>Gestión de averías</h3>
-
-                                <p>Nuestra tarea es prever los problemas.<br>
-                                Pero si ocurren, contamos con un robusto equipo de expertos en Plomería,<br>
-                                Aire Acondicionado y Calefacción, Electricidad, Carpintería, Cerrajería y reparaciones en general. Detectado el inconveniente, informamos, presupuestamos y supervisamos la reparación hasta su conclusión..
-
-                                <a href="#" rel="modal:close">Cerrar</a>
-                            </div>
+                            <p>Nuestra tarea es prever los problemas. Pero si ocurren, contamos con un robusto equipo de expertos en Plomería,
+                            Aire Acondicionado y Calefacción, Electricidad, Carpintería, Cerrajería y reparaciones en general. Detectado el inconveniente, informamos, presupuestamos y supervisamos la reparación hasta su conclusión.
+                            </p>
                         </div>
   					</section>
                      <!-- Casa Lista -->
@@ -109,16 +79,9 @@
 						<div onclick="seleccionarServicio('CL')" id="CL" class="image icon solid fas keep-check"><img src="images/serv-casa-lista.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Casa Lista</h3>
-
-                                Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada...
-                            <p><a href="#ex3" rel="modal:open">Ver más..</a></p>
-                            <div id="ex3" class="modal">
-                                <h3>Casa Lista</h3>
-
-                                Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada,
+                            <p>Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada,
                             calefaccionada y con una compra mínima de supermercado en la heladera, para aprovechar la estadía a pleno.
-                                <a href="#" rel="modal:close">Cerrar</a>
-                            </div>
+                            </p>
 
 						</div>
 					</section>
@@ -153,14 +116,9 @@
 					<section class="feature left">
 						<div onclick="seleccionarServicio('TA')" id="TA" class="image icon solid fas keep-check"><img src="images/serv-transfer.jpg" alt="" /></div>
 						<div class="content">
-							<h3>Transfer desde <br>el Aeropuerto <br>o Bahía Blanca</h3>
-                            <p>¿Visitas que llegan en otro medio que <br>no sea en auto? Nosotros nos ocupamos...</p>
-                            <p><a href="#ex5" rel="modal:open">Ver más..</a></p>
-                            <div id="ex5" class="modal">
-                                <h3>Transfer desde <br>el Aeropuerto <br>o Bahía Blanca</h3>
-                            <p>¿Visitas que llegan en otro medio que <br>no sea en auto? Nosotros nos ocupamos <br>de traerlo sin que Ud. se pierda un minuto de playa. Contratación puntual, no se incorpora al abono. </p>
-                                 <a href="#" rel="modal:close">Cerrar</a>
-                            </div>
+							<h3>Transfer desde el Aeropuerto <br>o Bahía Blanca</h3>
+                            <p>¿Visitas que llegan en otro medio que no sea en auto? Nosotros nos ocupamos de traerlo sin que Ud. se pierda un minuto de playa. Contratación puntual, no se incorpora al abono.
+                            </p>
 						</div>
                     </section>
                       <!-- Envío / Recepción -->
@@ -168,16 +126,9 @@
 						<div onclick="seleccionarServicio('ER')" id="ER" class="image icon solid fas keep-check"><img src="images/serv-envio-recep.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Envío / Recepción</h3>
-							<p>¿Compró una heladera o un mueble nuevo?
-                            <br>Nosotros lo recibimos, instalamos<br> y damos el destino que Ud. <br>indique al aparato reemplazado...
-                            <p><a href="#ex4" rel="modal:open">Ver más..</a></p>
-                            <div id="ex4" class="modal">
-                                <h3>Envío / Recepción</h3>
-							<p>¿Compró una heladera o un mueble nuevo?
-                            <br>Nosotros lo recibimos, instalamos<br> y damos el destino que Ud. <br>indique al aparato reemplazado.
-                            <br>Lo mismo ocurre con paquetería de todos los tamaños.</p>
-                                <a href="#" rel="modal:close">Cerrar</a>
-                            </div>
+							<p>¿Compró una heladera o un mueble nuevo? Nosotros lo recibimos, instalamos y damos el destino que Ud. indique al aparato reemplazado.
+                            Lo mismo ocurre con paquetería de todos los tamaños.
+                            </p>
 
                         </div>
                     </section>
@@ -195,7 +146,7 @@
 						<div onclick="seleccionarServicio('SA')" id="SA" class="image icon solid fas keep-check"><img src="images/serv-antiplagas.jpg" alt="" /></div>
 						<div class="content">
 							<h3>Servicio antiplagas</h3>
-							<p>Fumigación sistemática del hogar,<br> jardín y parque, para mantener la higiene <br>y asegurarle que su momento de relax <br>no se convierta en algo desagradable.</p>
+							<p>Fumigación sistemática del hogar, jardín y parque, para mantener la higiene y asegurarle que su momento de relax no se convierta en algo desagradable.</p>
 
                         </div>
                     </section>

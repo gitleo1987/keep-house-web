@@ -103,12 +103,15 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #6e6e6e;
+		color: black;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
 	}
+    p {
+        line-height: 1.15em;
+    }
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -138,10 +141,10 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #5b5b5b;
+		color: black;
 		font-weight: 700;
 		letter-spacing: 0.125em;
-		line-height: 1.75em;
+		line-height: 1.2em;
 		margin-bottom: 1em;
 		text-transform: none;
 		text-align: center;
@@ -155,10 +158,14 @@ input, select, textarea {
 
 	h2 {
 		font-size: 1.50em;
+        font-weight: 300;
+        letter-spacing:0em;
 	}
 
 	h3 {
-		font-size: 1.5em;
+		font-size: 1.3em;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
 	}
 
 	sub {
@@ -191,12 +198,7 @@ input, select, textarea {
 #logocel {
     display: none;
 }
-#telefono {
 
-    width: 20% !important;
-
-
-}
 /*Botón Ver más*/
     .complete{
         display:none;
@@ -2701,7 +2703,7 @@ input, select, textarea {
 
 		.feature .content {
 			display: inline-block;
-			padding: 3.5em;
+			padding: 1.0em;
 			vertical-align: middle;
 			width: 48%;
 		}
@@ -2762,7 +2764,7 @@ input, select, textarea {
 		background-repeat: repeat-x,							no-repeat;
 		background-size: 3200px 460px,							cover;
 		color: rgba(255, 255, 255, 0.8);
-		padding: 10em 0 20em 0;
+		padding-top: 10em;
 		position: relative;
 		text-align: center;
 	}
@@ -2977,10 +2979,7 @@ input, select, textarea {
 			background: #ffffff;
 		}
         /* cabecera +1680px */
-        #telefono {
-            width: 1000px;
-            margin:auto;
-        }
+
         header.major p {
             font-size: 2em;
 			}
@@ -3000,7 +2999,7 @@ input, select, textarea {
 			}
 
 			h2 {
-				font-size: 1.10em;
+				font-size: 1.15em;
 			}
 
 			h3 {
@@ -3016,7 +3015,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 8em 0 16em 0;
+				padding: 8em 0 4em 0;
 			}
 
 				#header h1 {
@@ -3332,11 +3331,6 @@ input, select, textarea {
             display: none;
         }
 
-
-        #telefono {
-           width: 35% !important;
-
-        }
         h2  {
             font-size: 10pt;
             }
@@ -3414,10 +3408,7 @@ input, select, textarea {
             #logokeep {
                 display: none;
             }
-            #telefono {
-               width: 40% !important;
 
-            }
         	#header p {
 					font-size: 0.8em;
 				}
