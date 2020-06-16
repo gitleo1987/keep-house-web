@@ -2181,24 +2181,24 @@ input, select, textarea {
 
 	::-webkit-input-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.9;
 		position: relative;
 		top: 3px;
 	}
 
 	:-moz-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.9;
 	}
 
 	::-moz-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.9;
 	}
 
 	:-ms-input-placeholder {
 		color: inherit;
-		opacity: 0.5;
+		opacity: 0.9;
 	}
 
 /* Image */

@@ -86,6 +86,7 @@ $('#mySelect2').on('select2:unselect', function (e) {
     } else {
         $('#'+data['id']).removeClass('imagen-seleccionada');
     }
+    $('#mySelect2').trigger('change'); // Notify any JS components that the value changed
 });
 
 $('#mySelect2').on('select2:select', function (e) {
@@ -98,3 +99,14 @@ $('.image').click(function() {
     $(this).toggleClass('imagen-seleccionada');
 });
 
+$("#mySelect2").on("select2:unselecting", function (e) {
+    $(this).on("select2:opening.cancelOpen", function (evt) {
+        evt.preventDefault();
+
+        $(this).off("select2:opening.cancelOpen");
+  });
+});
+
+$(".abrir-selector-servicios").on("click", function () {
+    $('#mySelect2').select2("open");
+});
