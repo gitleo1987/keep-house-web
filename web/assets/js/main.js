@@ -110,3 +110,8 @@ $("#mySelect2").on("select2:unselecting", function (e) {
 $(".abrir-selector-servicios").on("click", function () {
     $('#mySelect2').select2("open");
 });
+
+$("#mySelect2").on('select2:opening select2:closing', function( event ) {
+    var $searchfield = $(this).parent().find('.select2-search__field');
+    $searchfield.prop('disabled', true);
+});

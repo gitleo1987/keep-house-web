@@ -1,5 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 /*
 	Directive by HTML5 UP
@@ -103,7 +104,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #6e6e6e;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -144,6 +145,7 @@ input, select, textarea {
 		margin-bottom: 1em;
 		text-transform: uppercase;
 		text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
