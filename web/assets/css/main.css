@@ -3330,12 +3330,21 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
         #logocel {
             display:block;
+            width:75% !important;
             margin: auto;
         }
 		/* Section/Article */
         /* Corregir esto! */
         #logokeep {
             display: none;
+        }
+        .tel {
+            max-width: 30%;
+        }
+
+
+        .header-slogan {
+            bottom: 15% !important;
         }
 
         h2  {
@@ -3350,6 +3359,7 @@ input, select, textarea {
 				padding-left: 1em;
 				padding-right: 1em;
 			}
+
 
 		/* Button */
 
@@ -3421,6 +3431,15 @@ input, select, textarea {
 				}
             h2 {
                 font-size: 9pt;
-    }
+            }
+            .logo-vertical {
+                width:90% !important;
+            }
+            .header-slogan {
+                bottom: 30% !important;
+            }
+            .tel {
+            max-width: 30%;
+            }
 }
 
