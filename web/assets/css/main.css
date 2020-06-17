@@ -111,6 +111,7 @@ input, select, textarea {
 	}
     p {
         line-height: 1.15em;
+        font-size: 15pt;
     }
 
 	a {
@@ -216,11 +217,13 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
-		width: 51em;
+		width: 37em;
 	}
 
 		.container.medium {
 			width: 60em;
+            padding-left: 6em;
+            padding-right: 6em;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -267,6 +270,8 @@ input, select, textarea {
 
 			.container {
 				width: 100% !important;
+                padding-left: 0em !important;
+                padding-right: 0em !important;
 			}
 
 		}
@@ -2011,6 +2016,8 @@ input, select, textarea {
 			margin-bottom: 6em;
 			padding: 4em 0;
 			position: relative;
+            padding-left: 6em;
+            padding-right: 6em;
 		}
 
 			header.major:before, header.major:after {
@@ -2665,7 +2672,7 @@ input, select, textarea {
 
 	.feature {
 		position: relative;
-		height: 20em;
+		height: 14.5em;
 	}
 
 		.feature:after {
