@@ -16,8 +16,20 @@
 }
 .keep-lista-servicios {
     text-indent: -0.5em;
-    font-size: 15pt;
     margin-bottom: 0.1em;
+}
+@media screen and (max-width: 480px) {
+    .keep-lista-servicios {
+        font-size: 11pt;
+    }
+    p {
+        font-size:11pt;
+    }
+}
+@media screen and (min-width: 768px) {
+    .keep-lista-servicios {
+    font-size: 15pt;
+    }
 }
 .keep-lista-servicios li {
    line-height: 1.1em;
