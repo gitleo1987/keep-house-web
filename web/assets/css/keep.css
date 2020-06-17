@@ -14,13 +14,21 @@
     content:"\2713";
     font-family: KeepWeb;
 }
+.keep-lista-servicios {
+    text-indent: -0.5em;
+    font-size: 15pt;
+    margin-bottom: 0.1em;
+}
 .keep-lista-servicios li {
-    text-indent: -0.7em;
+   line-height: 1.1em;
 }
 .keep-lista-servicios li::before {
-  content: "• "; /* Insert content that looks like bullets */
+    content: "• "; /* Insert content that looks like bullets */
 }
 
+.keep-bullet {
+
+}
 #mySelect2 {
 
 }
@@ -31,7 +39,11 @@
 }
 
 .select2-selection--multiple .select2-selection__choice {
-    background-color: #6e6570 !important;
+    background-color: #ACABB0 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: white !important;
 }
 
 .img-responsive {
@@ -58,7 +70,7 @@
 }
 
 .imagen-seleccionada {
-    border: 10px solid #1a73e8;
+    border: 10px solid #B6B5BA;
 }
 
 .image img {
@@ -95,6 +107,10 @@
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #B6B5BA !important;
 }
 
 .select2-results__option {
