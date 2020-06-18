@@ -2338,10 +2338,12 @@ input, select, textarea {
 
 		.icon:before {
 			line-height: inherit;
+            text-shadow: 2px 2px 2px white;
 		}
 
 		.icon.solid:before {
 			font-weight: 900;
+            text-shadow: 2px 2px 2px white;
 		}
 
 		.icon.brands:before {

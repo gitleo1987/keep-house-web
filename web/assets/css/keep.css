@@ -78,7 +78,7 @@
 }
 
 .feature .image {
-    cursor: pointer;
+
 }
 
 .imagen-seleccionada {
@@ -148,4 +148,16 @@
 
 .tel{
    max-width: 12%;
+}
+
+.service-selector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    cursor: pointer;
+    z-index: 999;
 }

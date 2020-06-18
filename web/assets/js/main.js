@@ -84,19 +84,20 @@ $('#mySelect2').on('select2:unselect', function (e) {
     if (data['id'] == 'BA') {
         seleccionarServicio('BA');
     } else {
-        $('#'+data['id']).removeClass('imagen-seleccionada');
+        $('#'+data['id']).parent(Node).removeClass('imagen-seleccionada');
     }
     $('#mySelect2').trigger('change'); // Notify any JS components that the value changed
 });
 
 $('#mySelect2').on('select2:select', function (e) {
     var data = e.params.data;
-    $('#'+data['id']).addClass('imagen-seleccionada');
+    $('#'+data['id']).parent(Node).addClass('imagen-seleccionada');
 
 });
 
-$('.image').click(function() {
-    $(this).toggleClass('imagen-seleccionada');
+$('.service-selector').click(function() {
+    $(this).parent().toggleClass('imagen-seleccionada');
+    //$(this).toggleClass('imagen-seleccionada');
 });
 
 $("#mySelect2").on("select2:unselecting", function (e) {
