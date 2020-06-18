@@ -3332,7 +3332,7 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
         #logocel {
             display:block;
-            width:75% !important;
+            width:70% !important;
             margin: auto;
         }
 		/* Section/Article */
@@ -3340,14 +3340,14 @@ input, select, textarea {
         #logokeep {
             display: none;
         }
-        .tel {
-            max-width: 30%;
+        #slogan {
+            display: none;
+        }
+        #telefono {
+            max-width: 20%;
+            bottom: 15%;
         }
 
-
-        .header-slogan {
-            bottom: 15% !important;
-        }
 
         h2  {
             font-size: 10pt;
@@ -3427,20 +3427,21 @@ input, select, textarea {
             #logokeep {
                 display: none;
             }
-
+            #slogan {
+                display: none;
+            }
+            #logocel {
+                width:95% !important;
+            }
         	#header p {
 					font-size: 0.8em;
 				}
             h2 {
                 font-size: 12pt;
             }
-            .logo-vertical {
-                width:90% !important;
-            }
-            .header-slogan {
-                bottom: 30% !important;
-            }
-            .tel {
+
+
+            #telefono {
             max-width: 30%;
             }
 }
