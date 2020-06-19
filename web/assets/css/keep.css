@@ -97,8 +97,12 @@
 }
 
 .logo-vertical {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    position: absolute;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    top:40%;
+    left:50%;
 }
 
 .select2-selection__rendered {

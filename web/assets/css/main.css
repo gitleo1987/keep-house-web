@@ -3334,8 +3334,7 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
         #logocel {
             display:block;
-            width:70% !important;
-            margin: auto;
+            height: 90%;
         }
 		/* Section/Article */
         /* Corregir esto! */
@@ -3431,9 +3430,6 @@ input, select, textarea {
             }
             #slogan {
                 display: none;
-            }
-            #logocel {
-                width:95% !important;
             }
         	#header p {
 					font-size: 0.8em;
