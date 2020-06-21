@@ -27,7 +27,7 @@
 		});
 
 })(jQuery);
-/*Scroll to top when arrow up clicked BEGIN*/
+
 $(window) .scroll(function() {
     var height = $(window).scrollTop();
     if (height >350) {
@@ -37,9 +37,6 @@ $(window) .scroll(function() {
     }
 });
 
-
-
- /*Scroll to top when arrow up clicked END*/
 
 $(document).ready(function() {
     $('.js-servicios-basic-multiple').select2({

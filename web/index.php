@@ -1,3 +1,4 @@
+<?php include('procesar_form.php'); ?>
 <!DOCTYPE HTML>
 <!--
 	Directive by HTML5 UP
@@ -21,7 +22,15 @@
 
 	</head>
     	<body class="is-preload">
-
+            <?php
+            if (!empty($exito)) {
+                echo "<script> $(function() {
+                $('html, body').animate({
+                scrollTop: $('#resultado').offset().top}, 1000);
+                });
+            </script>";
+            }
+            ?>
 		<!-- Header -->
 			<div id="header">
                 <div class="header-logo">
@@ -32,7 +41,6 @@
                 </div>
                 <div class="header-slogan"><img class="img-responsive" id="slogan" src="images/slogan.png"></div>
                 <div class="header-consulta"><a href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img class="tel img-responsive" id="telefono" src="images/consulta.png"></a></div>
-
 			</div>
 
 		<!-- Main -->
@@ -40,11 +48,11 @@
 
 				<header class="major container medium">
 					<h2>Disfrutá la tranquilidad de que alguien se ocupe de tu casa mientras no estás.
-                    <br>Así cuando vuelvas, vas a encontrar "todo bien y en funcionamiento".
+                    <br>Así cuando vuelvas vas a encontrar "todo bien y en funcionamiento".
                     <br>Y si hubiera algún inconveniente, te lo avisaremos a tiempo y nos ocuparemos de resolverlo.
                     </h2><br>
                     <h2>Por un conveniente abono mensual te ofrecemos un servicio básico, al que podés sumar los adicionales que te parezcan.
-                    <br/>A continuación, armá tu kit tildando los servicios adicionales y solicitá presupuesto.
+                    <br/>A continuación, cliqueá sobre las fotos de los servicios que te interesen y solicitá presupuesto.
                     </h2>
 				</header>
                 <!-- Servicios -->
@@ -53,7 +61,7 @@
 					<section class="feature left">
 						<div class="image icon solid fas keep-letra-b"> <img src="images/serv-basico.jpg" alt="" /></div>
 						<div class="content">
-                            <a id="wssp" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; right: 20px; z-index: 2000;" title="Contactanos por Whatsapp" href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img src="images/whatsapp.png"></a>
+                            <a id="wssp" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; right: 20px; z-index: 2000;" title="Contactanos por Whatsapp" href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img class="img-responsive" src="images/whatsapp.png"></a>
 							<h3>Servicio Básico</h3>
                             <p>   Visita quincenal con revisión de:</p>
                             <ul class="keep-lista-servicios">
@@ -217,30 +225,6 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>45815</td>
-										<td>Something</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>24524</td>
-										<td>Nothing</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>45815</td>
-										<td>Something</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>24524</td>
-										<td>Nothing</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>19.99</td>
-									</tr>
 								</tbody>
 								<tfoot>
 									<tr>
@@ -285,13 +269,6 @@
 				</div>
 
 
-				<footer class="major container medium">
-					<h3>Get shady with science</h3>
-					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">Join our crew</a></li>
-					</ul>
-				</footer>
             -->
 			</div>
 
@@ -302,10 +279,10 @@
 					<header class="major last">
 						<h2>Solicitud de Presupuesto</h2>
 					</header>
-
+                    <span id="resultado" class="exito"><?= $exito ?></span>
 					<p>¿Querés saber cuál es el valor de nuestro servicio? <br>Agregá los adicionales que sean de tu interés y te enviaremos un presupuesto a medida. </p>
 
-					<form method="post" action="#">
+					<form  id="form-solicitud" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
 						<div class="row">
                             <div class="col-12">
                              <ul class="actions special">
@@ -327,16 +304,19 @@
                             </div>
 
 							<div class="col-6 col-12-mobilep">
-								<input type="text" name="nombre" placeholder="Nombre" />
+								<input type="text" name="nombre" value="<?= $nombre ?>" placeholder="Nombre" />
+                                <span class="error"><?= $nombre_error ?></span>
 							</div>
                             <div class="col-6 col-12-mobilep">
-								<input type="text" name="apellido" placeholder="Apellido" />
+								<input type="text" name="apellido" value="<?= $apellido ?>" placeholder="Apellido" />
 							</div>
 							<div class="col-12">
-								<input type="email" name="email" placeholder="Correo Electrónico" />
+								<input type="email" name="email" value="<?= $email ?>" placeholder="Correo Electrónico" />
+                                <span class="error"><?= $email_error ?></span>
 							</div>
                             <div class="col-6 col-12-mobilep">
-								<input type="text" name="telefono" placeholder="Teléfono / WhatsApp" />
+								<input type="text" name="telefono" value="<?= $telefono ?>" placeholder="Teléfono / WhatsApp" />
+                                <span class="error"><?= $telef_error ?></span>
 							</div>
 							<div class="col-6 col-12-mobilep">
 								<select id="mySelect2-inm" class="js-inmueble-basic-single" name="inmueble" lang="es">
@@ -344,15 +324,16 @@
                                     <option value="CA">Casa</option>
                                     <option value="DE">Departamento</option>
                                 </select>
+                                <span class="error"><?= $inmueble_error ?></span>
 							</div>
                             <div class="col-6 col-12-mobilep">
-								<input type="text" name="supcub" placeholder="Superficie cubierta" />
+								<input type="text" name="supcub" value="<?= $supcub ?>" placeholder="Superficie cubierta" />
 							</div>
                             <div class="col-6 col-12-mobilep">
-								<input type="text" name="supdesc" placeholder="Superficie descubierta" />
+								<input type="text" name="supdesc" value="<?= $supdesc ?>" placeholder="Superficie descubierta" />
 							</div>
 							<div class="col-12">
-								<input type="text" name="calle" placeholder="Calle y Número" />
+								<input type="text" name="calle" value="<?= $calle ?>" placeholder="Calle y Número" />
 							</div>
 							<div class="col-12">
 								<ul class="actions special">
@@ -361,7 +342,6 @@
 							</div>
 						</div>
 					</form>
-
                     <div class="map-responsive">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12406.09133193535!2d-61.313595455310335!3d-38.980562342553924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958d5290cbca6087%3A0x6250958d52aefc8a!2sMonte%20Hermoso%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1592172069662!5m2!1ses!2sar" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
@@ -390,6 +370,14 @@
 			<script src="assets/js/main.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
             <!-- Libreria español -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/es.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/es.js"></script>
+            <script>
+                $('#mySelect2-inm').val('<?= $inmueble ?>'); // Select the option with a value of '1'
+                $('#mySelect2-inm').trigger('change');
+                $('#mySelect2').val([<?= $servicios ?>]);
+                $('#mySelect2').trigger('change');
+            </script>
+
+
 	</body>
 </html>
