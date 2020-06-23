@@ -1,6 +1,6 @@
 <?php
     $servicios = $nombre_error = $email_error = $telef_error = $inmueble_error = "";
-    $nombre = $apellido = $email = $telefono = $inmueble = $supcub = $supdesc = $calle = "";
+    $nombre = $apellido = $email = $telefono = $inmueble = $calle = "";
     $exito = "";
 
 
@@ -31,19 +31,12 @@
             $inmueble = test_input($_POST["inmueble"]);
         }
         $servicios_array = $_POST['servicios'];
-        $lista_servicios = "<ul>";
+        $lista_servicios = "\n";
         foreach ($servicios_array as $servicio) {
-            $lista_servicios .= "<li>" . get_servicio($servicio) . "</li>";
+            $lista_servicios .= "    - " . get_servicio($servicio) . "\n";
             $servicios .= "'$servicio',";
         }
-        $lista_servicios .= "</ul>";
 
-        if (!empty($_POST["supcub"])) {
-            $supcub = test_input($_POST["supcub"]);
-            }
-        if (!empty($_POST["supdesc"])) {
-            $supdesc = test_input($_POST["supdesc"]);
-        }
         if (!empty($_POST["calle"])) {
             $calle = test_input($_POST["calle"]);
         }
@@ -52,22 +45,25 @@
         if ($nombre_error == '' and $email_error == '' and $telef_error == '' and $inmueble_error == '')
         {
             $cuerpo = '';
-            $cuerpo .= "Nombre: " . $nombre . "\n";
-            $cuerpo .= "Apellido: " . $apellido . "\n";
+            $cuerpo .= "Nombre: " . strtoupper($nombre) . "\n";
+            $cuerpo .= "Apellido: " . strtoupper($apellido) . "\n";
             $cuerpo .= "Email: " . $email . "\n";
             $cuerpo .= "Teléfono: " . $telefono . "\n";
             $cuerpo .= "Inmueble: " . get_inmueble($inmueble) . "\n";
+            $cuerpo .= "Calle: " . strtoupper($calle) . "\n";
             $cuerpo .= "Servicios: " . $lista_servicios . "\n";
-            $cuerpo .= "Sup. Cubierta: " . $supcub . "\n";
-            $cuerpo .= "Sup. Descubierta: " . $supdesc . "\n";
-            $cuerpo .= "Calle: " . $calle . "\n";
-        }
-        $to      = 'maildeprueba@host.com';
+
+        $to      = 'e.alejandro.lemus@gmail.com,gabriel@waiser.com.ar';
         $subject = 'KeepHouse Web - Solicitud de presupuesto';
         if (mail($to, $subject, $cuerpo)){
             $exito = "Solicitud de Presupuesto enviada exitosamente";
             //reset form values to empty strings
-            $servicios = $nombre = $apellido = $email = $telefono = $inmueble = $supcub = $supdesc = $calle = "";
+            $servicios = $nombre = $apellido = $email = $telefono = $inmueble = $calle = "";
+        } else {
+            $exito = "Error al enviar";
+        }
+    } else {
+            $exito = "Se encontraron errores";
         }
 
     }
@@ -80,12 +76,22 @@
     }
 
     function get_inmueble($sigla) {
-        if ($sigla == 'CA') {
-            return 'CASA';
-        } elseif ($sigla == 'DE') {
-            return 'DEPARTAMENTO';
-        } else {
-            return 'NO SELECCIONADO';
+        switch ($sigla) {
+            case 'CA':
+                return 'CASA';
+                break;
+            case 'DE':
+                return 'DEPARTAMENTO';
+                break;
+            case 'LC':
+                return 'LOCAL COMERCIAL';
+                break;
+            case 'PH':
+                return 'PH';
+                break;
+            case 'TE':
+                return 'Terreno';
+                break;
         }
     }
 

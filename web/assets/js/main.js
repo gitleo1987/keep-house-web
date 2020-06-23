@@ -39,6 +39,7 @@ $(window) .scroll(function() {
 
 
 $(document).ready(function() {
+    $("#input-tel").inputmask('099[9][9]-159999999[9]',{ "clearIncomplete": true });
     $('.js-servicios-basic-multiple').select2({
           placeholder: {
             text: 'Servicios seleccionados'
@@ -49,6 +50,7 @@ $(document).ready(function() {
         placeholder: 'Tipo de Inmueble',
         minimumResultsForSearch: Infinity
     });
+
 });
 
 function seleccionarServicio(codigo) {

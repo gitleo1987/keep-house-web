@@ -19,7 +19,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-
 	</head>
     	<body class="is-preload">
             <?php
@@ -212,31 +211,6 @@
 
 					<section>
 						<header>
-							<h3>Table</h3>
-						</header>
-						<div class="table-wrapper">
-							<table class="default">
-								<thead>
-									<tr>
-										<th>ID</th>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="3"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-					<section>
-						<header>
 							<h3>Form</h3>
 						</header>
 						<form method="post" action="#">
@@ -304,36 +278,33 @@
                             </div>
 
 							<div class="col-6 col-12-mobilep">
-								<input type="text" name="nombre" value="<?= $nombre ?>" placeholder="Nombre" />
+								<input type="text" name="nombre" required value="<?= $nombre ?>" placeholder="Nombre" />
                                 <span class="error"><?= $nombre_error ?></span>
 							</div>
                             <div class="col-6 col-12-mobilep">
-								<input type="text" name="apellido" value="<?= $apellido ?>" placeholder="Apellido" />
+								<input type="text" name="apellido" required value="<?= $apellido ?>" placeholder="Apellido" />
 							</div>
 							<div class="col-12">
-								<input type="email" name="email" value="<?= $email ?>" placeholder="Correo Electrónico" />
+								<input type="email" name="email" required value="<?= $email ?>" placeholder="Correo Electrónico" />
                                 <span class="error"><?= $email_error ?></span>
 							</div>
                             <div class="col-6 col-12-mobilep">
-								<input type="text" name="telefono" value="<?= $telefono ?>" placeholder="Teléfono / WhatsApp" />
+								<input type="text" id="input-tel" required name="telefono" value="<?= $telefono ?>" placeholder="Teléfono / WhatsApp" />
                                 <span class="error"><?= $telef_error ?></span>
 							</div>
 							<div class="col-6 col-12-mobilep">
-								<select id="mySelect2-inm" class="js-inmueble-basic-single" name="inmueble" lang="es">
+								<select id="mySelect2-inm" required class="js-inmueble-basic-single" name="inmueble" lang="es">
                                     <option></option>
                                     <option value="CA">Casa</option>
                                     <option value="DE">Departamento</option>
+                                    <option value="LC">Local Comercial</option>
+                                    <option value="PH">PH</option>
+                                    <option value="TE">Terreno</option>
                                 </select>
                                 <span class="error"><?= $inmueble_error ?></span>
 							</div>
-                            <div class="col-6 col-12-mobilep">
-								<input type="text" name="supcub" value="<?= $supcub ?>" placeholder="Superficie cubierta" />
-							</div>
-                            <div class="col-6 col-12-mobilep">
-								<input type="text" name="supdesc" value="<?= $supdesc ?>" placeholder="Superficie descubierta" />
-							</div>
 							<div class="col-12">
-								<input type="text" name="calle" value="<?= $calle ?>" placeholder="Calle y Número" />
+								<input type="text" name="calle" required value="<?= $calle ?>" placeholder="Calle y Número" />
 							</div>
 							<div class="col-12">
 								<ul class="actions special">
@@ -366,13 +337,15 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/jquery.inputmask.js"></script>
+            <script src="assets/js/bindings/inputmask.binding.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
             <!-- Libreria español -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/es.js"></script>
             <script>
-                $('#mySelect2-inm').val('<?= $inmueble ?>'); // Select the option with a value of '1'
+                $('#mySelect2-inm').val('<?= $inmueble ?>');
                 $('#mySelect2-inm').trigger('change');
                 $('#mySelect2').val([<?= $servicios ?>]);
                 $('#mySelect2').trigger('change');
