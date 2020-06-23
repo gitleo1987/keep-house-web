@@ -15,8 +15,8 @@
     font-family: KeepWeb;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-stroke: 4px;
-    text-shadow: -2px -2px 10px #000000;
+    -webkit-text-stroke: 3px;
+    text-shadow: -2px -2px 2px #000000;
     z-index: 998;
 }
 .keep-lista-servicios {
@@ -172,8 +172,8 @@
 }
 
 .exito {
-    color: #166088;
+    color: #B6B5BA;
     text-align: center;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.4em;
 }

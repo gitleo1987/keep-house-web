@@ -1,10 +1,13 @@
 <?php
+    session_start();
+    ob_start();
+    date_default_timezone_set('America/Argentina/Buenos_Aires');
     $servicios = $nombre_error = $email_error = $telef_error = $inmueble_error = "";
     $nombre = $apellido = $email = $telefono = $inmueble = $calle = "";
-    $exito = "";
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
         if (empty($_POST["nombre"])) {
             $nombre_error = "Nombre es obligatorio";
         } else {
@@ -31,9 +34,9 @@
             $inmueble = test_input($_POST["inmueble"]);
         }
         $servicios_array = $_POST['servicios'];
-        $lista_servicios = "\n";
+        $lista_servicios = "<br>";
         foreach ($servicios_array as $servicio) {
-            $lista_servicios .= "    - " . get_servicio($servicio) . "\n";
+            $lista_servicios .= "    - " . get_servicio($servicio) . "<br>";
             $servicios .= "'$servicio',";
         }
 
@@ -45,26 +48,30 @@
         if ($nombre_error == '' and $email_error == '' and $telef_error == '' and $inmueble_error == '')
         {
             $cuerpo = '';
-            $cuerpo .= "Nombre: " . strtoupper($nombre) . "\n";
-            $cuerpo .= "Apellido: " . strtoupper($apellido) . "\n";
-            $cuerpo .= "Email: " . $email . "\n";
-            $cuerpo .= "Teléfono: " . $telefono . "\n";
-            $cuerpo .= "Inmueble: " . get_inmueble($inmueble) . "\n";
-            $cuerpo .= "Calle: " . strtoupper($calle) . "\n";
-            $cuerpo .= "Servicios: " . $lista_servicios . "\n";
+            $cuerpo .= "Nombre: " . strtoupper($nombre) . "<br>";
+            $cuerpo .= "Apellido: " . strtoupper($apellido) . "<br>";
+            $cuerpo .= "Email: " . $email . "<br>";
+            $cuerpo .= "Teléfono: " . $telefono . "<br>";
+            $cuerpo .= "Inmueble: " . get_inmueble($inmueble) . "<br>";
+            $cuerpo .= "Calle: " . strtoupper($calle) . "<br>";
+            $cuerpo .= "Servicios: " . $lista_servicios . "<br>";
+            $cuerpo .= "Enviado: " . date('l jS \of F Y h:i:s A');
 
-        $to      = 'e.alejandro.lemus@gmail.com,gabriel@waiser.com.ar';
-        $subject = 'KeepHouse Web - Solicitud de presupuesto';
-        if (mail($to, $subject, $cuerpo)){
-            $exito = "Solicitud de Presupuesto enviada exitosamente";
-            //reset form values to empty strings
-            $servicios = $nombre = $apellido = $email = $telefono = $inmueble = $calle = "";
+            $to      = 'e.alejandro.lemus@gmail.com,gabriel@waiser.com.ar';
+            $subject = 'KeepHouse Web - Solicitud de presupuesto';
+            $header = "Content-type: text/html; charset=utf-8 \r\n";
+            $header .= "MIME-Version: 1.0";
+            if (mail($to, $subject, $cuerpo,$header)){
+                $_SESSION['mensaje'] = "Solicitud de Presupuesto enviada exitosamente";
+                $servicios = $nombre = $apellido = $email = $telefono = $inmueble = $calle = "";
+            } else {
+                $_SESSION['mensaje'] = "Error al enviar";
+            }
         } else {
-            $exito = "Error al enviar";
+            $_SESSION['mensaje'] = "Se encontraron errores";
         }
-    } else {
-            $exito = "Se encontraron errores";
-        }
+        header("location:index.php");
+        exit;
 
     }
 
@@ -130,4 +137,5 @@
                 break;
         }
     }
+    ob_end_flush();
 ?>

@@ -22,12 +22,16 @@
 	</head>
     	<body class="is-preload">
             <?php
-            if (!empty($exito)) {
+            $mensaje = "";
+            if(isset($_SESSION['mensaje']))
+            {
                 echo "<script> $(function() {
                 $('html, body').animate({
                 scrollTop: $('#resultado').offset().top}, 1000);
                 });
             </script>";
+                $mensaje = $_SESSION['mensaje'];
+                unset($_SESSION['mensaje']);
             }
             ?>
 		<!-- Header -->
@@ -58,10 +62,10 @@
                 <!-- Servicio Básico -->
 				<div class="box alt container">
 					<section class="feature left">
-						<div class="image icon solid fas keep-letra-b"> <img src="images/serv-basico.png" alt="" /></div>
+						<div class="image icon fas keep-letra-b"> <img src="images/serv-basico.png" alt="" /></div>
 						<div class="content">
                             <a id="wssp" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; right: 20px; z-index: 2000;" title="Contactanos por Whatsapp" href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img class="img-responsive" src="images/whatsapp.png"></a>
-                            <div id="logoflot" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; left: 20px; z-index: 2000;"><img class="img-responsive" src="images/logo-flotante.png"></div>
+                            <div id="logoflot" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; top: 50px; left: 20px; z-index: 2000;"><img class="img-responsive" src="images/logo-flotante.png"></div>
 							<h3>Servicio Básico</h3>
                             <p>   Visita quincenal con revisión de:</p>
                             <ul class="keep-lista-servicios">
@@ -96,7 +100,7 @@
                         </section>
                       <!-- Control de averías -->
 					<section class="feature right">
-						<div class="image icon solid fas keep-check imagen-no-seleccionada">
+						<div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="GA" class="service-selector" onclick="seleccionarServicio('GA')"></div>
                             <img src="images/serv-averias.jpg" alt="" />
                         </div>
@@ -109,7 +113,7 @@
   					</section>
                      <!-- Casa Lista -->
 					<section class="feature left">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="CL" class="service-selector" onclick="seleccionarServicio('CL')"></div>
                             <img src="images/serv-casa-lista.jpg" alt="" />
                         </div>
@@ -125,7 +129,7 @@
                  <!-- Representación ante el consorcio-->
 
 					<section class="feature right">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="RC" class="service-selector" onclick="seleccionarServicio('RC')"></div>
                             <img src="images/serv-representacion.jpg" alt="" />
                         </div>
@@ -136,7 +140,7 @@
   					</section>
                      <!-- Gestión y pago de proveedores-->
 					<section class="feature left">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="PP" class="service-selector" onclick="seleccionarServicio('PP')"></div>
                             <img src="images/serv-gestion-pago.jpg" alt="" />
                         </div>
@@ -147,7 +151,7 @@
                     </section>
                     <!-- Reformas en la Vivienda -->
 					<section class="feature right">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="RV" class="service-selector" onclick="seleccionarServicio('RV')"></div>
                             <img src="images/serv-reformas.jpg" alt="" />
                         </div>
@@ -158,7 +162,7 @@
 					</section>
 				 <!-- Transfer desde el Aeropuerto o Bahía Blanca -->
 					<section class="feature left">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="TA" class="service-selector" onclick="seleccionarServicio('TA')"></div>
                             <img src="images/serv-transfer.jpg" alt="" />
                         </div>
@@ -170,7 +174,7 @@
                     </section>
                       <!-- Envío / Recepción -->
 					<section class="feature right">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="ER" class="service-selector" onclick="seleccionarServicio('ER')"></div>
                             <img src="images/serv-envio-recep.jpg" alt="" />
                         </div>
@@ -184,7 +188,7 @@
                     </section>
                       <!-- Leña y Carbón  -->
 					<section class="feature left">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="LC" class="service-selector" onclick="seleccionarServicio('LC')"></div>
                             <img src="images/serv-lena-carbon.jpg" alt="" />
                         </div>
@@ -196,7 +200,7 @@
 
                     <!-- Servivio antiplagas -->
                     <section class="feature right">
-                        <div class="image icon solid fas keep-check imagen-no-seleccionada">
+                        <div class="image icon fas keep-check imagen-no-seleccionada">
                             <div id="SA" class="service-selector" onclick="seleccionarServicio('SA')"></div>
                             <img src="images/serv-antiplagas.jpg" alt="" />
                         </div>
@@ -216,18 +220,6 @@
 						</header>
 						<form method="post" action="#">
 							<div class="row">
-								<div class="col-6 col-12-mobilep">
-									<label for="name">Name</label>
-									<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
-								</div>
-								<div class="col-6 col-12-mobilep">
-									<label for="email">Email</label>
-									<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-								</div>
-								<div class="col-12">
-									<label for="subject">Subject</label>
-									<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-								</div>
 								<div class="col-12">
 									<label for="subject">Message</label>
 									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
@@ -254,7 +246,7 @@
 					<header class="major last">
 						<h2>Solicitud de Presupuesto</h2>
 					</header>
-                    <span id="resultado" class="exito"><?= $exito ?></span>
+                    <span id="resultado" class="exito"><?= $mensaje ?></span>
 					<p>¿Querés saber cuál es el valor de nuestro servicio? <br>Agregá los adicionales que sean de tu interés y te enviaremos un presupuesto a medida. </p>
 
 					<form  id="form-solicitud" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
