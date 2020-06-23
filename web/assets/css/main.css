@@ -195,6 +195,9 @@ input, select, textarea {
 #wssp {
     display: none;
 }
+#logoflot {
+    display: none;
+}
 
 #logocel {
     display: none;
@@ -2000,35 +2003,35 @@ input, select, textarea {
 	}
 
 
-		header p {
-			position: relative;
-			top: -1em;
-			color: #888888;
-			text-transform: uppercase;
-			letter-spacing: 0.075em;
-		}
+	header p {
+		position: relative;
+		top: -1em;
+		color: #888888;
+		text-transform: uppercase;
+		letter-spacing: 0.075em;
+	}
 
-		header.major {
-			border-bottom-width: 1px;
-			border-color: rgba(224, 224, 224, 0.75);
-			border-style: solid;
-			border-top-width: 1px;
-			margin-bottom: 6em;
-			padding: 4em 0;
-			position: relative;
-            padding-left: 6em;
-            padding-right: 6em;
-		}
+	header.major {
+		border-bottom-width: 1px;
+		border-color: rgba(224, 224, 224, 0.75);
+		border-style: solid;
+		border-top-width: 1px;
+		margin-bottom: 6em;
+		padding: 4em 0;
+		position: relative;
+        padding-left: 6em;
+        padding-right: 6em;
+	}
 
-			header.major:before, header.major:after {
-				background: rgba(224, 224, 224, 0.75);
-				content: '';
-				display: block;
-				height: 1px;
-				left: 0;
-				position: absolute;
-				width: 100%;
-			}
+	header.major:before, header.major:after {
+        background: rgba(224, 224, 224, 0.75);
+        content: '';
+        display: block;
+		height: 1px;
+        left: 0;
+        position: absolute;
+	    width: 100%;
+    }
 
 			header.major:before {
 				top: 10px;
@@ -2065,30 +2068,31 @@ input, select, textarea {
 				header.major.last h2 {
 					margin-bottom: 1em;
 				}
-                header .wssp {
+                header .wssp .logoflot {
                     position: fixed;
                     width: 90%;
                     max-width: 1440px;
 
                 }
-                    header .wssp img{
+                header .wssp .logoflot img{
 
-                        border-left:0 ;
-                        max-width: 200px;
-                        clear:both;
-                    }
-                        #whattsapp {
-                            float:none;
-                        }
-                        #lemus {
-                            float:none;
-                        }
-                   /*FRUTA*/
-                    header .tel {
-                            position: relative !important;
-                            padding: 0;
-                            float:none;
-                        }
+                    border-left:0 ;
+                    max-width: 200px;
+                    clear:both;
+                }
+
+                #whattsapp {
+                    float:none;
+                }
+                #lemus {
+                    float:none;
+                }
+                /*FRUTA*/
+                header .tel {
+                    position: relative !important;
+                    padding: 0;
+                    float:none;
+                }
 	footer {
 		text-align: center;
 	}

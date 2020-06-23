@@ -32,8 +32,10 @@ $(window) .scroll(function() {
     var height = $(window).scrollTop();
     if (height >350) {
         $('#wssp').fadeIn();
+        $('#logoflot').fadeIn();
     } else {
         $('#wssp').fadeOut();
+        $('#logoflot').fadeOut();
     }
 });
 

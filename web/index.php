@@ -51,16 +51,17 @@
                     <br>Y si hubiera algún inconveniente, te lo avisaremos a tiempo y nos ocuparemos de resolverlo.
                     </h2><br>
                     <h2>Por un conveniente abono mensual te ofrecemos un servicio básico, al que podés sumar los adicionales que te parezcan.
-                    <br/>A continuación, cliqueá sobre las fotos de los servicios que te interesen y solicitá presupuesto.
+                    <br/>A continuación cliqueá sobre las fotos de los servicios que te interesen y solicitá presupuesto.
                     </h2>
 				</header>
                 <!-- Servicios -->
                 <!-- Servicio Básico -->
 				<div class="box alt container">
 					<section class="feature left">
-						<div class="image icon solid fas keep-letra-b"> <img src="images/serv-basico.jpg" alt="" /></div>
+						<div class="image icon solid fas keep-letra-b"> <img src="images/serv-basico.png" alt="" /></div>
 						<div class="content">
                             <a id="wssp" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; right: 20px; z-index: 2000;" title="Contactanos por Whatsapp" href="https://wa.me/5492921408809?text=Me%20interesa%20saber%20más%20del%20servicio" target="_blank"><img class="img-responsive" src="images/whatsapp.png"></a>
+                            <div id="logoflot" style="display: scroll;border:none; width: 50px; height: 50px; position: fixed; bottom: 50px; left: 20px; z-index: 2000;"><img class="img-responsive" src="images/logo-flotante.png"></div>
 							<h3>Servicio Básico</h3>
                             <p>   Visita quincenal con revisión de:</p>
                             <ul class="keep-lista-servicios">
@@ -114,7 +115,7 @@
                         </div>
 						<div class="content">
 							<h3>Casa Lista</h3>
-                            <p>Si está por venir a pasar la temporada o un fin de semana en cualquier momento del año, avísenos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada,
+                            <p>Si estás por venir a pasar la temporada o un fin de semana en cualquier momento del año, avisanos con 48hs de anticipación y nos ocuparemos de que la casa esté ventilada,
                             calefaccionada y con una compra mínima de supermercado en la heladera, para aprovechar la estadía a pleno.
                             </p>
 
@@ -130,7 +131,7 @@
                         </div>
 						<div class="content">
 							<h3>Representación ante el consorcio</h3>
-                            <p>Venir a Monte sólo por una reunión del edificio es muy molesto. Autorización mediante le representaremos y rendiremos un informe para mantenerlo al tanto. </p>
+                            <p>Venir a Monte sólo por una reunión del edificio es muy molesto. Autorización mediante te representaremos y rendiremos un informe para mantenerte al tanto. </p>
 						</div>
   					</section>
                      <!-- Gestión y pago de proveedores-->
@@ -141,7 +142,7 @@
                         </div>
 						<div class="content">
 							<h3>Gestión y pago de proveedores</h3>
-							<p>Deslíguese del pago de servicios, proveedores y gestiones municipales. </p>
+							<p>Desligate del pago de servicios, proveedores y gestiones municipales. </p>
                         </div>
                     </section>
                     <!-- Reformas en la Vivienda -->
@@ -163,7 +164,7 @@
                         </div>
 						<div class="content">
 							<h3>Transfer desde el Aeropuerto <br>o Bahía Blanca</h3>
-                            <p>¿Visitas que llegan en otro medio que no sea en auto? Nosotros nos ocupamos de traerlo sin que Ud. se pierda un minuto de playa. Contratación puntual, no se incorpora al abono.
+                            <p>¿Visitas que llegan en otro medio que no sea en auto? Nosotros nos ocupamos de traerlos sin que pierdas un minuto de playa. Contratación puntual, no se incorpora al abono.
                             </p>
 						</div>
                     </section>
@@ -175,7 +176,7 @@
                         </div>
 						<div class="content">
 							<h3>Envío / Recepción</h3>
-							<p>¿Compró una heladera o un mueble nuevo? Nosotros lo recibimos, instalamos y damos el destino que Ud. indique al aparato reemplazado.
+							<p>¿Compraste una heladera o un mueble nuevo? Nosotros lo recibimos, instalamos y damos el destino que indiques al aparato reemplazado.
                             Lo mismo ocurre con paquetería de todos los tamaños.
                             </p>
 
@@ -189,7 +190,7 @@
                         </div>
 						<div class="content">
 							<h3>Leña y Carbón</h3>
-							<p>Nos ocupamos de mantener su leñera y carbonera siempre lista para un buen asado o un cálido fuego en el invierno. </p>
+							<p>Nos ocupamos de mantener tu leñera y carbonera siempre lista para un buen asado o un cálido fuego en el invierno. </p>
 						</div>
 					</section>
 
@@ -201,7 +202,7 @@
                         </div>
 						<div class="content">
 							<h3>Servicio antiplagas</h3>
-							<p>Fumigación sistemática del hogar, jardín y parque, para mantener la higiene y asegurarle que su momento de relax no se convierta en algo desagradable.</p>
+							<p>Fumigación sistemática del hogar, jardín y parque, para mantener la higiene y asegurarte que tu momento de relax no se convierta en algo desagradable.</p>
 
                         </div>
                     </section>
