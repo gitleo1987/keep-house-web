@@ -324,6 +324,11 @@
 					</ul>
 
 				</div>
+                <div class="container medium">
+                <ul class="desarrollador">
+                    <li>Desarrollado por <a href="https://wa.me/5492915227801" target="_blank"> Waiser Creatividad Publicitaria</a></li>
+				</ul>
+                </div>
 			</div>
 
 		<!-- Scripts -->
