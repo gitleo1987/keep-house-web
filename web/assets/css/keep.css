@@ -1,6 +1,7 @@
 @font-face {
   font-family: KeepWeb;
   src: url("../webfonts/keep-web.woff");
+  font-display: swap;
 }
 
 #header {
@@ -65,6 +66,12 @@
 
 .img-responsive {
     max-width: 100%;
+    height: auto;
+}
+
+.mapa a img {
+    object-fit: cover;
+    width: 100%;
     height: auto;
 }
 
