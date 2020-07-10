@@ -67,11 +67,12 @@
             } else {
                 $_SESSION['mensaje'] = "Error al enviar";
             }
+        header("location:index.php");
+             exit;
+
         } else {
             $_SESSION['mensaje'] = "Se encontraron errores";
         }
-        header("location:index.php");
-        exit;
 
     }
 
