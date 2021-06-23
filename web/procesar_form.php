@@ -57,7 +57,7 @@
             $cuerpo .= "Servicios: " . $lista_servicios . "<br>";
             $cuerpo .= "Enviado: " . date('l jS \of F Y h:i:s A');
 
-            $to      = 'e.alejandro.lemus@gmail.com,gabriel@waiser.com.ar';
+            $to      = 'marcelo.lemus56@gmail.com,gabriel@waiser.com.ar';
             $subject = 'KeepHouse Web - Solicitud de presupuesto';
             $header = "Content-type: text/html; charset=utf-8 \r\n";
             $header .= "MIME-Version: 1.0";
